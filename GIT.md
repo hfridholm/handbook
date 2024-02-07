@@ -74,6 +74,7 @@ There are a lot of git commands, so remembering them all is impossible.
 - [Repository](#repository)
 - [Branching](#branching)
 - [Merging](#merging)
+- [Stashing](#stashing)
 - [Remotes](#remotes)
 
 ## Repository
@@ -136,6 +137,13 @@ git status
 git commit
 ```
 
+[theprimeagen](https://www.youtube.com/shorts/9awOb_q2fhA)
+
+Add changes to the previous commit
+```bash
+git commit --amend --no-commit
+```
+
 [git stash](https://git-scm.com/docs/git-stash)
 
 ```bash
@@ -192,12 +200,46 @@ git show <commit>
 git merge
 ```
 
+```bash
+git checkout --theirs <file>
+```
+
+```bash
+git checkout --ours <file>
+```
+
 ### git rebase
 
 [git rebase](https://git-scm.com/docs/git-rebase)
 
 ```bash
 git rebase
+```
+
+## Stashing
+
+```bash
+git stash list
+```
+
+```bash
+git stash show <stash>
+```
+
+```bash
+git stash
+```
+
+```bash
+git stash apply <stash>
+```
+
+```bash
+git stash pop <stash>
+```
+
+```bash
+git stash drop <stash>
 ```
 
 ## Remotes
@@ -211,7 +253,7 @@ git remote --verbose
 ```
 
 ```bash
-git remote add <remote> <link>
+git remote add <remote> <url>
 ```
 
 ```bash
@@ -220,6 +262,14 @@ git remote show <remote>
 
 ```bash
 git branch --set-upstream-to=<upstream> <branch>
+```
+
+```bash
+git remote set-url <remote> <new-url>
+```
+
+```bash
+git remote remove <remote>
 ```
 
 ### git push
@@ -248,4 +298,10 @@ git fetch <remote> <branch>
 
 ```bash
 git pull 
+```
+
+## Submodules
+
+```bash
+git submodule add <url>
 ```

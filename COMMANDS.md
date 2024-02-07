@@ -1,5 +1,17 @@
 # Commands
 
+`&&` only runs the next command if the previous one exited with status 0:
+
+```bash
+command1 && command2 && command3
+```
+
+`;` runs every commands, even if the previous one exits with a non zero status:
+
+```bash
+command1; command2; command3
+```
+
 If you want to know what a system program or utility does, you can always check the man page - the system reference manual. The system's manual pager also contains C functions. For more information, the appropriate thing to do, is to check the man page for the man bash command!
 
 [man man](https://www.man7.org/linux/man-pages/man1/man.1.html)
@@ -20,6 +32,12 @@ man <program>
 ls -al
 ```
 
+[man tree](https://linux.die.net/man/1/tree)
+
+```bash
+tree -L <depth>
+```
+
 [man cd](https://www.man7.org/linux/man-pages/man1/cd.1p.html)
 
 ```bash
@@ -29,6 +47,8 @@ cd <directory>
 ```bash
 cp <source> <destination>
 ```
+
+### Move / Rename
 
 [man mv](https://www.man7.org/linux/man-pages/man1/mv.1.html)
 
