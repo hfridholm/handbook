@@ -71,3 +71,41 @@ Upload the sketch to your specific board
 ```bash
 arduino-cli upload --port /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 <sketch>
 ```
+
+## Windows specific commands
+
+```bat
+REM arduino-start.bat
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 arduino
+arduino-cli upload --port COM3 --fqbn esp8266:esp8266:nodemcuv2 arduino
+python C:\Users\22hamfri\arduino-monitor.py
+```
+
+```bash
+pip install pyserial
+```
+
+```python
+# arduino-monitor.py
+import serial
+
+port = serial.Serial("COM3", 9600)
+
+while True:
+    if port.in_waiting > 0:
+        line = port.read(port.in_waiting).decode("utf-8", errors="ignore")
+        print(line, end="")
+```
+
+### Old School
+```bash
+mode COM3: baud=9600 parity=n data=8 stop=1
+```
+
+```bat
+REM arduino-monitor.bat
+@echo off
+:loop
+type COM3
+goto loop
+```

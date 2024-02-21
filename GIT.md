@@ -121,7 +121,11 @@ git branch -d <branch>
 [git add](https://git-scm.com/docs/git-add)
 
 ```bash
-git add
+git add <file>
+```
+
+```bash
+git add --intent-to-add <file>
 ```
 
 [git status](https://git-scm.com/docs/git-status)
@@ -151,7 +155,11 @@ git restore
 [git checkout](https://git-scm.com/docs/git-checkout)
 
 ```bash
-git checkout
+git checkout <branch>
+```
+
+```bash
+git checkout -b <new-branch>
 ```
 
 [git clean](https://git-scm.com/docs/git-clean)
@@ -168,6 +176,20 @@ Remove files and directories
 git clean -d -f
 ```
 
+[git ls-tree](https://git-scm.com/docs/git-ls-tree)
+
+To list all the files currently being tracked
+```bash
+git ls-tree -r <branch> --name-only
+```
+
+```bash
+git rm --cached <file>
+```
+
+```bash
+git rm -r --cached <directory>
+```
 ## History
 
 [git log](https://git-scm.com/docs/git-log)
