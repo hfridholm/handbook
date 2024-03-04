@@ -200,6 +200,16 @@ git show <commit>
 git merge
 ```
 
+Merge with `<branch>` and prioritize `their` changes in the case of conflicts
+```bash
+git merge --strategy-option theirs <branch>
+```
+
+Merge with `<branch>` and prioritize `ours` changes in the case of conflicts
+```bash
+git merge --strategy-option ours <branch>
+```
+
 ```bash
 git checkout --theirs <file>
 ```
