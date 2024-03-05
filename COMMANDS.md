@@ -87,3 +87,30 @@ top
 ```bash
 w3m <url>
 ```
+
+## Zip
+```bash
+sudo apt install zip
+```
+
+```bash
+zip <file>.zip <file>
+```
+
+```bash
+unzip <file>.zip -d <dir>
+```
+
+## netcat
+
+[](https://superuser.com/questions/98089/sending-file-via-netcat)
+
+Send <file>.zip to <address> on <port>
+```bash
+cat <file>.zip | netcat <address> <port>
+```
+
+Receive <file>.zip on <port>
+```bash
+nc -l -p <port> -q 1 > <file>.zip < /dev/null
+```
