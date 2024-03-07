@@ -18,6 +18,25 @@ The Ubuntu distribution offers these popular package managers:
 
 The main differences between the different package managers can be read about [here](https://askubuntu.com/questions/76/whats-the-difference-between-package-managers). Personally, I use apt for the most part, for things like upgrading system package dependencies and to install simple programs. There also exists apt-get, and here you can read about [the difference between apt and apt-get](https://askubuntu.com/questions/445384/what-is-the-difference-between-apt-and-apt-get).
 
+
+See information about a package
+
+```bash
+apt-cache policy <package>
+```
+
+Search for packages by content keyword, for example the command
+
+```bash
+dpkg --search <keyword>
+```
+
+Display detailed status information about a package
+
+```bash
+dpkg --status <package>
+```
+
 ### Installing Packages
 
 Often, packages can simply be installed with apt
@@ -52,6 +71,16 @@ sudo apt install <file>.deb
 
 ```bash
 apt-cache search <keyword>
+```
+
+### Removing Packages
+
+```bash
+sudo apt-get remove <package>
+```
+
+```bash
+sudo apt purge <package>
 ```
 
 ### Upgrading System
@@ -93,6 +122,12 @@ sudo apt-get install libsdl2-dev
 sudo apt-get install libsdl2-image-dev
 ```
 
+### ncurses
+
+```bash
+sudo apt-get install libncurses5-dev libncursesw5-dev
+```
+
 ### Spotify
 
 [spotify.com](https://www.spotify.com/us/download/linux/)
@@ -117,4 +152,24 @@ sudo apt install neofetch
 
 ```bash
 sudo apt install sox
+```
+
+### Netstat
+
+```bash
+sudo apt install net-tools
+```
+
+```bash
+netstat -lntu
+```
+
+### Pdftoppm
+
+```bash
+sudo apt install poppler-utils
+```
+
+```bash
+pdftoppm <pdf> <png> -png
 ```
