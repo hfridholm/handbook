@@ -118,3 +118,11 @@ sudo apt install neofetch
 ```bash
 sudo apt install sox
 ```
+
+### GMP
+
+[GMP](https://gmplib.org/)
+
+```bash
+sudo apt install libgmp-dev
+```
