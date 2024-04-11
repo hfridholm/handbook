@@ -12,9 +12,12 @@ tar -xvzf <file>.tar.gz
 ```bash
 lsblk
 ```
-
 ```bash
-sudo umount /dev/sdX 
+sudo umount /dev/sdXn
+```
+Example:
+```bash
+sudo umount /dev/sdc1
 ```
 
 4. Navigate into directory and run Ventoy2Disk.sh

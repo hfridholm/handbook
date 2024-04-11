@@ -173,3 +173,11 @@ sudo apt install poppler-utils
 ```bash
 pdftoppm <pdf> <png> -png
 ```
+
+# HEIC
+
+[Stack Exchange](https://askubuntu.com/questions/958355/any-app-on-ubuntu-to-open-and-or-convert-heif-pictures-heic-high-efficiency-i)
+
+```bash
+sudo apt install heif-gdk-pixbuf heif-thumbnailer
+```

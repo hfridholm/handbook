@@ -18,6 +18,11 @@ Identify the disk by it's metadata using `blkid`
 blkid
 ```
 
+List partition layout on all block devices
+```bash
+sudo parted -l
+```
+
 ## Erase and format disk
 
 ### Not used links
@@ -125,3 +130,47 @@ sudo mkdir /mnt/disk1
 ```bash
 sudo mount /dev/sdX /mnt/disk1
 ```
+
+# Unmounting disks
+```bash
+sudo umount /dev/sdXn
+```
+Example:
+```bash
+sudo umount /dev/sdc1
+```
+
+# Check health of disk
+
+## smartctl
+
+Installing smartctl from the smartmontools package
+```bash
+sudo apt install smartmontools
+```
+
+Check if the disk supports SMART and if it is enabled or not
+```bash
+smartctl -i /dev/sdX
+```
+
+## badblocks
+
+Check for bad blocks in read-only test (completly safe)
+```bash
+sudo badblocks -sv /dev/sdX
+```
+
+Check for bad blocks in non-destructive read-write mode
+```bash
+sudo badblocks -svn /dev/sdX
+```
+
+Check for bad blocks in destructive read-write mode
+Only run this scan if you are going to erase the disk afterwards
+```bash
+sudo badblocks -svw /dev/sdX
+```
+
+The `-s` option is for showing the progress of the scan
+The `-v` option stands for verbose and will output the errors

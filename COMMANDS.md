@@ -107,3 +107,10 @@ top
 ```bash
 w3m <url>
 ```
+
+```bash
+feh <image>
+```
+```bash
+sudo apt install feh
+```
