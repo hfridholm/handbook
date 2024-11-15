@@ -15,4 +15,4 @@
 
 Dotfiles are...
 
-[H4PE0N's dotfiles](https://github.com/H4PE0N/dotfiles)
+[dotfiles](https://github.com/hfridholm/dotfiles)
