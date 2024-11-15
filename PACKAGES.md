@@ -73,6 +73,22 @@ sudo apt install <file>.deb
 apt-cache search <keyword>
 ```
 
+### Holding Packages
+
+[StackOverflow](https://askubuntu.com/questions/18654/how-to-prevent-updating-of-a-specific-package)
+
+```bash
+sudo apt-mark hold <package>
+```
+
+```bash
+sudo apt-mark unhold <package>
+```
+
+```bash
+sudo apt-mark showhold
+```
+
 ### Removing Packages
 
 ```bash

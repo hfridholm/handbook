@@ -15,4 +15,18 @@
 
 Dotfiles are...
 
-[H4PE0N's dotfiles](https://github.com/H4PE0N/dotfiles)
+[hfridholm's dotfiles](https://github.com/hfridholm/dotfiles)
+
+Make utillities accessable from anywhere:
+`.bashrc`
+```bash
+...
+
+UTILS_DIR=/home/hampus/Documents/Programming
+
+export PATH=$PATH\
+:$UTILS_DIR/hashing/binary\
+:$UTILS_DIR/passman/binary\
+:$UTILS_DIR/crypto/binary\
+:$UTILS_DIR/procom/binary
+```
