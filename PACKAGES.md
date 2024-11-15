@@ -73,6 +73,17 @@ sudo apt install <file>.deb
 apt-cache search <keyword>
 ```
 
+### See installed packages
+
+```bash
+apt list --installed
+```
+
+Check if a package containing the search is installed and what it is called
+```bash
+apt list --installed | grep <search>
+```
+
 ### Removing Packages
 
 ```bash
@@ -182,7 +193,7 @@ sudo apt install poppler-utils
 pdftoppm <pdf> <png> -png
 ```
 
-# HEIC
+### HEIC
 
 [Stack Exchange](https://askubuntu.com/questions/958355/any-app-on-ubuntu-to-open-and-or-convert-heif-pictures-heic-high-efficiency-i)
 

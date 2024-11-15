@@ -331,6 +331,12 @@ git push
 git fetch <remote> <branch>
 ```
 
+When you use the `--prune` or `-p` option, deleted remote branches are removed locally aswell.
+
+```bash
+git fetch --prune
+```
+
 ### git pull
 
 [git pull](https://git-scm.com/docs/git-pull)
@@ -366,4 +372,16 @@ git pull <remote> <branch> --allow-unrelated-histories
 
 ```bash
 git submodule add <url>
+```
+
+List all the branches, which contains the specified commit
+
+[StackOverflow](https://stackoverflow.com/questions/1419623/how-to-list-branches-that-contain-a-given-commit)
+
+```bash
+git branch --contains <commit>
+```
+
+```bash
+git branch -r --contains <commit>
 ```
