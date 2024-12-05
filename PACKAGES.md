@@ -73,6 +73,17 @@ sudo apt install <file>.deb
 apt-cache search <keyword>
 ```
 
+### See installed packages
+
+```bash
+apt list --installed
+```
+
+Check if a package containing the search is installed and what it is called
+```bash
+apt list --installed | grep <search>
+```
+
 ### Holding Packages
 
 [StackOverflow](https://askubuntu.com/questions/18654/how-to-prevent-updating-of-a-specific-package)
@@ -170,6 +181,14 @@ sudo apt install neofetch
 sudo apt install sox
 ```
 
+### GMP
+
+[GMP](https://gmplib.org/)
+
+```bash
+sudo apt install libgmp-dev
+```
+
 ### Netstat
 
 ```bash
@@ -190,7 +209,7 @@ sudo apt install poppler-utils
 pdftoppm <pdf> <png> -png
 ```
 
-# HEIC
+### HEIC
 
 [Stack Exchange](https://askubuntu.com/questions/958355/any-app-on-ubuntu-to-open-and-or-convert-heif-pictures-heic-high-efficiency-i)
 

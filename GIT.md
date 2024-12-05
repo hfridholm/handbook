@@ -117,6 +117,13 @@ git checkout -b <new-branch> <branch>
 git branch -d <branch>
 ```
 
+## Reset
+
+Make the current branch point to `<branch>`
+```bash
+git reset --hard <branch>
+```
+
 ## Working Tree
 
 [git add](https://git-scm.com/docs/git-add)
@@ -324,16 +331,57 @@ git push
 git fetch <remote> <branch>
 ```
 
+When you use the `--prune` or `-p` option, deleted remote branches are removed locally aswell.
+
+```bash
+git fetch --prune
+```
+
 ### git pull
 
 [git pull](https://git-scm.com/docs/git-pull)
 
+Pull all branches from all remotes
 ```bash
 git pull 
+```
+
+Pull all branches from a specific remote
+```bash
+git pull <remote>
+```
+
+Pull a specific branch from a remote
+```bash
+git pull <remote> <branch>
+```
+
+To fix this error: "fatal: refusing to merge unrelated histories"
+
+[stackoverflow](https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase)
+
+First fix this error: "fatal: Need to specify how to reconcile divergent branches"
+```bash
+git config --global pull.rebase false
+```
+```bash
+git pull <remote> <branch> --allow-unrelated-histories
 ```
 
 ## Submodules
 
 ```bash
 git submodule add <url>
+```
+
+List all the branches, which contains the specified commit
+
+[StackOverflow](https://stackoverflow.com/questions/1419623/how-to-list-branches-that-contain-a-given-commit)
+
+```bash
+git branch --contains <commit>
+```
+
+```bash
+git branch -r --contains <commit>
 ```

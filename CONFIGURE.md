@@ -15,7 +15,7 @@
 
 Dotfiles are...
 
-[hfridholm's dotfiles](https://github.com/hfridholm/dotfiles)
+[dotfiles](https://github.com/hfridholm/dotfiles)
 
 Make utillities accessable from anywhere:
 `.bashrc`
