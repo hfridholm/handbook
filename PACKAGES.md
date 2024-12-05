@@ -84,6 +84,22 @@ Check if a package containing the search is installed and what it is called
 apt list --installed | grep <search>
 ```
 
+### Holding Packages
+
+[StackOverflow](https://askubuntu.com/questions/18654/how-to-prevent-updating-of-a-specific-package)
+
+```bash
+sudo apt-mark hold <package>
+```
+
+```bash
+sudo apt-mark unhold <package>
+```
+
+```bash
+sudo apt-mark showhold
+```
+
 ### Removing Packages
 
 ```bash

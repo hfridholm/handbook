@@ -141,3 +141,42 @@ Receive <file>.zip on <port>
 ```bash
 nc -l -p <port> -q 1 > <file>.zip < /dev/null
 ```
+
+## Su
+
+Enter root mode
+```bash
+sudo su
+```
+
+Exit root mode, return to normal user mode:
+```bash
+exit
+```
+
+# Jobs
+
+Suspend a process (the current job)
+```
+[CTRL-Z]
+```
+
+Send a process to the background
+```
+bg
+```
+
+List background jobs
+```
+jobs
+```
+
+Start a process in the background
+```
+<process> &
+```
+
+Bring a job from the background to the foreground
+```
+fg %<jobnum>
+```
